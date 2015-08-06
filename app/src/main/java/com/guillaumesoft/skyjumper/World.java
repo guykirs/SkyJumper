@@ -65,7 +65,6 @@ public class World
 		this.bronzecoins = new ArrayList<>();
 		this.gems        = new ArrayList<>();
 
-
 		this.listener = listener;
         rand = new Random();
         generateLevel();

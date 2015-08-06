@@ -84,8 +84,10 @@ public class GameScreen extends GLScreen
         world        = new World(worldListener);
         renderer     = new WorldRenderer(glGraphics, batcher, world);
         pauseBounds  = new Rectangle(1920 - 250, 1080 - 100, 64, 64);
-        resumeBounds = new Rectangle(160 - 96, 240, 192, 36);
-        quitBounds   = new Rectangle(160 - 96, 240 - 36, 192, 36);
+
+        resumeBounds = new Rectangle(1920 /2, 1080 /2, 192, 36);
+
+        quitBounds   = new Rectangle(1920 /2, 1080 /2 - 50, 192, 36);
         lastScore    = 0;
         scoreString  = "";
         fpsCounter   = new FPSCounter();
@@ -321,9 +323,9 @@ public class GameScreen extends GLScreen
 	    float topWidth = Assets.font.glyphWidth * topText.length();
 	    float bottomWidth = Assets.font.glyphWidth * bottomText.length();
 
-        batcher.beginBatch(Assets.items);
-	    //Assets.font.drawText(batcher, topText, 160 - topWidth / 2, 480 - 40);
-	    //Assets.font.drawText(batcher, bottomText, 160 - bottomWidth / 2, 40);
+        batcher.beginBatch(Assets.BlueFont);
+	    Assets.bluefont.drawText(batcher, topText, 160 - topWidth / 2, 480 - 40, 10, 10);
+	    Assets.bluefont.drawText(batcher, bottomText, 160 - bottomWidth / 2, 40, 10, 10);
         batcher.endBatch();
 	}
 	

@@ -2,7 +2,8 @@ package com.guillaumesoft.skyjumper;
 
 import com.badlogic.androidgames.framework.GameObject;
 
-public class Castle extends GameObject {
+public class Castle extends GameObject
+{
     public static float CASTLE_WIDTH = 1.7f;
     public static float CASTLE_HEIGHT = 1.7f;
 

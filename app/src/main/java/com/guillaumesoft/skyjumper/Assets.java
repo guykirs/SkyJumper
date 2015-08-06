@@ -169,6 +169,7 @@ public class Assets
         RedFont.reload();
         BlueFont.reload();
         tiles.reload();
+        items.reload();
 
         if(Settings.soundEnabled)
             music.play();

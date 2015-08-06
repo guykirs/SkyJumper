@@ -10,6 +10,8 @@ import com.badlogic.androidgames.framework.impl.GLGraphics;
 
 public class WorldRenderer
 {
+    /////////////////////////////////////////
+    // CLASS VARAIBLES
     static final float FRUSTUM_WIDTH = 10;
     static final float FRUSTUM_HEIGHT = 15;    
     GLGraphics glGraphics;
@@ -20,9 +22,9 @@ public class WorldRenderer
     public WorldRenderer(GLGraphics glGraphics, SpriteBatcher batcher, World world)
     {
         this.glGraphics = glGraphics;
-        this.world = world;
-        this.cam = new Camera2D(glGraphics, FRUSTUM_WIDTH, FRUSTUM_HEIGHT);
-        this.batcher = batcher;        
+        this.world      = world;
+        this.cam        = new Camera2D(glGraphics, FRUSTUM_WIDTH, FRUSTUM_HEIGHT);
+        this.batcher    = batcher;
     }
     
     public void render()
@@ -39,8 +41,7 @@ public class WorldRenderer
     {
         batcher.beginBatch(Assets.background);
 
-           batcher.drawSprite(cam.position.x, cam.position.y, FRUSTUM_WIDTH, FRUSTUM_HEIGHT,
-                           Assets.backgroundRegion);
+           batcher.drawSprite(cam.position.x, cam.position.y, FRUSTUM_WIDTH, FRUSTUM_HEIGHT, Assets.backgroundRegion);
 
         batcher.endBatch();
     }
@@ -75,7 +76,8 @@ public class WorldRenderer
     private void renderBob()
     {
         TextureRegion keyFrame;
-        switch(world.bob.state) {
+        switch(world.bob.state)
+        {
         case Bob.BOB_STATE_FALL:
             keyFrame = Assets.bobFall.getKeyFrame(world.bob.stateTime, Animation.ANIMATION_LOOPING);
             break;
