@@ -182,8 +182,9 @@ public class World
 		{
 			Platform platform = platforms.get(i);
 			platform.update(deltaTime);
-			if (platform.state == Platform.PLATFORM_STATE_PULVERIZING
-					&& platform.stateTime > Platform.PLATFORM_PULVERIZE_TIME) {
+
+			if (platform.state == Platform.PLATFORM_STATE_PULVERIZING && platform.stateTime > Platform.PLATFORM_PULVERIZE_TIME)
+			{
 				platforms.remove(platform);
 				len = platforms.size();
 			}

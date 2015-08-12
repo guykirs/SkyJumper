@@ -90,7 +90,7 @@ public class HighscoresScreen extends GLScreen
         float y = 240;
         for(int i = 4; i >= 0; i--)
         {
-            //Assets.font.drawText(batcher, highScores[i], xOffset, y);
+            Assets.font.drawText(batcher, highScores[i], xOffset, y, 10, 10);
             y += Assets.font.glyphHeight;
         }
         
